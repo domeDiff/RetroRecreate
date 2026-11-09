@@ -63,7 +63,7 @@ public class SSSGameManager : MonoBehaviour
         direction = queuedDirection;
         Vector2Int newHead = GridPos(segments[0]) + direction;
 
-        if(newHead.x < MinX || newHead.x >= MaxX || newHead.y < MinY || newHead.y >= MaxY)
+        if(newHead.x < MinX || newHead.x > MaxX || newHead.y < MinY || newHead.y > MaxY)
         {
             ResetGame();
             return;

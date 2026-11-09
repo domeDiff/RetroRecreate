@@ -7,6 +7,7 @@ public class SSSSnack : MonoBehaviour
         if (collision.CompareTag("SSSPlayer"))
         {
             gameObject.SetActive(false);
+            SSSSpawner.SpawnSnack();
         }
     }
 }

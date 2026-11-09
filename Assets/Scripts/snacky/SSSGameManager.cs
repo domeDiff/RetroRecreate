@@ -10,9 +10,15 @@ public class SSSGameManager : MonoBehaviour
     [SerializeField] private Transform snackPrefab;
 
     [Header("Properties")]
-    [SerializeField] private int width = 20;
-    [SerializeField] private int height = 20;
+    [SerializeField] private int width = 21;
+    [SerializeField] private int height = 21;
     [SerializeField] private float moveInterval = 0.12f;
+
+    // Grid bounds, centered on (0, 0)
+    int MinX => -(width / 2);
+    int MaxX => MinX + width - 1;
+    int MinY => -(height / 2);
+    int MaxY => MinY + height - 1;
 
     private List<Transform> segments = new List<Transform>();
     private Vector2Int direction = Vector2Int.right; //direction that was last moved
@@ -57,7 +63,7 @@ public class SSSGameManager : MonoBehaviour
         direction = queuedDirection;
         Vector2Int newHead = GridPos(segments[0]) + direction;
 
-        if(newHead.x < 0 || newHead.x >= width || newHead.y < 0 || newHead.y >= height)
+        if(newHead.x < MinX || newHead.x >= MaxX || newHead.y < MinY || newHead.y >= MaxY)
         {
             ResetGame();
             return;
@@ -100,7 +106,7 @@ public class SSSGameManager : MonoBehaviour
         queuedDirection = Vector2Int.right;
         timer = 0f;
 
-        Transform head = Instantiate(snakeSegmentPrefab, new Vector3(width / 2, height / 2, 0), Quaternion.identity);
+        Transform head = Instantiate(snakeSegmentPrefab, Vector3.zero,  Quaternion.identity);
         segments.Add(head);
 
         MoveFood();
@@ -111,7 +117,7 @@ public class SSSGameManager : MonoBehaviour
         Vector2Int pos;
         do
         {
-            pos = new Vector2Int(Random.Range(0, width), Random.Range(0, height));
+            pos = new Vector2Int(Random.Range(MinX, MaxX + 1), Random.Range(MinY, MaxY + 1));
         } while (IsOnSnake(pos));
 
         snackPrefab.position = new Vector3(pos.x, pos.y, 0);

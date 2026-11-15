@@ -13,8 +13,10 @@ public class SSSMainMenuManager : MonoBehaviour
     [SerializeField] private SpriteRenderer background;
 
     [Header("Theme Elements")]
+    [SerializeField] private Camera camBackground;
     [SerializeField] private SpriteRenderer[] sceneSprites;
     [SerializeField] private Image[] buttons;
+    [SerializeField] private Image[] panels;
     [SerializeField] private TMP_Text[] texts;
 
     public void LoadGame()
@@ -76,16 +78,25 @@ public class SSSMainMenuManager : MonoBehaviour
             return;
         }
 
+        camBackground.backgroundColor = backgroundColor;
+
         foreach(SpriteRenderer sprite in sceneSprites)
         {
             if (sprite != null)
                 sprite.color = backgroundColor;
         }
 
-        foreach(Image button in buttons)
+        foreach (Image panel in panels)
+        {
+            if (panel != null)
+                panel.color = backgroundColor;
+        }
+
+        foreach (Image button in buttons)
         {
             if (button != null)
                 button.color = buttonColor;
+     
         }
 
         foreach(TMP_Text text in texts)
@@ -99,11 +110,18 @@ public class SSSMainMenuManager : MonoBehaviour
 
     public void ThemeSelect_02()
     {
-        ApplyTheme("#210613", "##fffff5", "#f63090");
+        ApplyTheme("#210613", "#fffff5", "#f63090");
+        int themeCode = 02;
+        SaveTheme(themeCode);
     }
 
     public void ThemeSelect_03()
     {
-        ApplyTheme("#210613", "##fffff5", "#f63090");
+        ApplyTheme("#210613", "#fffff5", "#f63090");
+    }
+
+    private void SaveTheme(int x)
+    {
+        PlayerPrefs.Save();
     }
 }

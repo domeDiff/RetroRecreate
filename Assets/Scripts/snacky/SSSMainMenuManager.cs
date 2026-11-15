@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +8,7 @@ public class SSSMainMenuManager : MonoBehaviour
     [SerializeField] private GameObject UIThemeSelectPanel;
     [SerializeField] private GameObject UIGameSelectMenu;
     [SerializeField] private GameObject UISettingsMenu;
+    [SerializeField] private SpriteRenderer background;
 
     public void LoadGame()
     {
@@ -53,5 +53,14 @@ public class SSSMainMenuManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void ThemeSelect_02()
+    {
+        Color Theme02_back;
+
+        if(ColorUtility.TryParseHtmlString("#210613", out Theme02_back)){
+            background.color = Theme02_back;
+        }
     }
 }

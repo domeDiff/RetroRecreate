@@ -1,7 +1,8 @@
 using System;
-using Unity.VisualScripting;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SSSMainMenuManager : MonoBehaviour
 {
@@ -9,6 +10,14 @@ public class SSSMainMenuManager : MonoBehaviour
     [SerializeField] private GameObject UIThemeSelectPanel;
     [SerializeField] private GameObject UIGameSelectMenu;
     [SerializeField] private GameObject UISettingsMenu;
+    [SerializeField] private SpriteRenderer background;
+
+    [Header("Theme Elements")]
+    [SerializeField] private Camera camBackground;
+    [SerializeField] private SpriteRenderer[] sceneSprites;
+    [SerializeField] private Image[] buttons;
+    [SerializeField] private Image[] panels;
+    [SerializeField] private TMP_Text[] texts;
 
     public void LoadGame()
     {
@@ -53,5 +62,66 @@ public class SSSMainMenuManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void ApplyTheme(string backgroundHex, string buttonHex, string textHex)
+    {
+        Color backgroundColor;
+        Color buttonColor;
+        Color textColor;
+
+        if(!ColorUtility.TryParseHtmlString(backgroundHex, out backgroundColor) || 
+            !ColorUtility.TryParseHtmlString(buttonHex, out buttonColor) || 
+            !ColorUtility.TryParseHtmlString(textHex, out textColor))
+        {
+            Debug.Log("Invalide color code");
+            return;
+        }
+
+        camBackground.backgroundColor = backgroundColor;
+
+        foreach(SpriteRenderer sprite in sceneSprites)
+        {
+            if (sprite != null)
+                sprite.color = backgroundColor;
+        }
+
+        foreach (Image panel in panels)
+        {
+            if (panel != null)
+                panel.color = backgroundColor;
+        }
+
+        foreach (Image button in buttons)
+        {
+            if (button != null)
+                button.color = buttonColor;
+     
+        }
+
+        foreach(TMP_Text text in texts)
+        {
+            if(text != null)
+            {
+                text.color = textColor;
+            }
+        }
+    }
+
+    public void ThemeSelect_02()
+    {
+        ApplyTheme("#210613", "#fffff5", "#f63090");
+        int themeCode = 02;
+        SaveTheme(themeCode);
+    }
+
+    public void ThemeSelect_03()
+    {
+        ApplyTheme("#210613", "#fffff5", "#f63090");
+    }
+
+    private void SaveTheme(int x)
+    {
+        PlayerPrefs.Save();
     }
 }

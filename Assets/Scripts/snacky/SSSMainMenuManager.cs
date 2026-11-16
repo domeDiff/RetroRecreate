@@ -108,16 +108,26 @@ public class SSSMainMenuManager : MonoBehaviour
         }
     }
 
-    public void ThemeSelect_02()
+    public void styx()
     {
-        ApplyTheme("#210613", "#fffff5", "#f63090");
+        ApplyTheme("#2c2c2a", "#fff3f3", "#a07cff");
         int themeCode = 02;
         SaveTheme(themeCode);
     }
 
-    public void ThemeSelect_03()
+    public void sangria()
     {
         ApplyTheme("#210613", "#fffff5", "#f63090");
+    }
+
+    public void BWR()
+    {
+        ApplyTheme("#1c1626", "#fefffb", "#ff2961");
+    }
+
+    public void Obsidian()
+    {
+        ApplyTheme("#000828", "#590c68", "#92215f");
     }
 
     private void SaveTheme(int x)

@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 137938116}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: YYPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,6 +257,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2804159570129322141, guid: d2d6ed5fb67db8647aec2feba7ef207e, type: 3}
   spawnOffsetX: 20
   spawnOffsetY: 12
+  spawnTimer: 3
 --- !u!1 &1162981800
 GameObject:
   m_ObjectHideFlags: 0

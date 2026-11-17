@@ -1,5 +1,5 @@
-using System;
-using System.Threading;
+
+
 using UnityEngine;
 
 public class YYEnemySpawner : MonoBehaviour
@@ -10,9 +10,10 @@ public class YYEnemySpawner : MonoBehaviour
     [SerializeField] private float spawnTimer = 3f;
 
     private Vector3 spawnPoint;
+
     private void Start()
     {
-        spawnPoint = new Vector3(spawnOffsetX, spawnOffsetY, 0f);
+         spawnPoint = new Vector3(Random.Range(-20f, 20f), spawnOffsetY, 0f);
     }
     private void Update()
     {

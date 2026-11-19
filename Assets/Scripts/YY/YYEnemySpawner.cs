@@ -5,7 +5,7 @@ using UnityEngine;
 public class YYEnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab;
-    [SerializeField] private float spawnOffsetX = 20f;
+    //[SerializeField] private float spawnOffsetX = 20f;
     [SerializeField] private float spawnOffsetY = 12f;
     [SerializeField] private float spawnTimer = 3f;
 

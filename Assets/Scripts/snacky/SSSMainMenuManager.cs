@@ -134,4 +134,14 @@ public class SSSMainMenuManager : MonoBehaviour
     {
         PlayerPrefs.Save();
     }
+
+    public void LoadSnacky()
+    {
+        SceneManager.LoadScene("Snacky");
+    }
+
+    public void LoadYY()
+    {
+        SceneManager.LoadScene("YatoYattack");
+    }
 }

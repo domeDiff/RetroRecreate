@@ -3281,7 +3281,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1256637833}
         m_TargetAssemblyTypeName: SSSMainMenuManager, Assembly-CSharp
-        m_MethodName: styx
+        m_MethodName: LoadSnacky
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3584,7 +3584,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1256637833}
         m_TargetAssemblyTypeName: SSSMainMenuManager, Assembly-CSharp
-        m_MethodName: styx
+        m_MethodName: LoadYY
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -10,7 +10,7 @@ public class YYEnemySpawner : MonoBehaviour
     [SerializeField] private float spawnTimer = 3f;
 
 
-    private int[] validPosY = {12, -12};
+    //private int[] validPosY = {12, -12};
     private Vector3 spawnPoint;
 
     //private void Start()
@@ -32,7 +32,7 @@ public class YYEnemySpawner : MonoBehaviour
 
     private Vector3 GetNewSpawnPoint()
     {
-        int validPos_Y = Random.Range(0, validPosY.Length);
-        return spawnPoint = new Vector3(Random.Range(-20f, 20f), validPos_Y , 0f);
+        int value = Random.Range(0, 2) == 0 ? 12 : -12;
+        return spawnPoint = new Vector3(Random.Range(-20f, 20f), value , 0f);
     }
 }

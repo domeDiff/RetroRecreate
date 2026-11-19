@@ -26,4 +26,12 @@ public class YYEnemyMovement : MonoBehaviour
             moveSpeed * Time.deltaTime
         );
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("YYPlayer"))
+        {
+            collision.gameObject.SetActive(false);
+        }
+    }
 }

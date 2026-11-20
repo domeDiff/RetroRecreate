@@ -117,7 +117,7 @@ public class SSSGameManager : MonoBehaviour
         Vector2Int pos;
         do
         {
-            pos = new Vector2Int(Random.Range(MinX, MaxX + 1), Random.Range(MinY, MaxY + 1));
+            pos = new Vector2Int(Random.Range(-17, 17), Random.Range(-9, 9));
         } while (IsOnSnake(pos));
 
         snackPrefab.position = new Vector3(pos.x, pos.y, 0);

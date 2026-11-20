@@ -14,7 +14,6 @@ public class SSSMainMenuManager : MonoBehaviour
 
     [Header("Theme Elements")]
     [SerializeField] private Camera camBackgroundMM;
-    [SerializeField] private Camera camBackgroundGM;
     [SerializeField] private SpriteRenderer[] sceneSprites;
     [SerializeField] private Image[] buttons;
     [SerializeField] private Image[] panels;
@@ -81,7 +80,6 @@ public class SSSMainMenuManager : MonoBehaviour
         }
 
         camBackgroundMM.backgroundColor = backgroundColor;
-        camBackgroundGM.backgroundColor = backgroundColor;
 
         foreach(SpriteRenderer sprite in sceneSprites)
         {

@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class SSSGameManager : MonoBehaviour
 {
@@ -40,6 +41,8 @@ public class SSSGameManager : MonoBehaviour
             timer -= moveInterval;
             Step();
         }
+
+        QuitToMainMenu();
     }
 
     private void ReadInput()
@@ -133,5 +136,20 @@ public class SSSGameManager : MonoBehaviour
     Vector2Int GridPos(Transform t)
     {
         return new Vector2Int(Mathf.RoundToInt(t.position.x), Mathf.RoundToInt(t.position.y));
+    }
+
+    private void QuitToMainMenu()
+    {
+        float quit_timer = 3f;
+        if (Keyboard.current.qKey.isPressed)
+        {
+            quit_timer -= Time.deltaTime;
+            SceneManager.LoadScene("Main_Menu");
+        }
+
+        else
+        {
+            quit_timer = 3f;
+        }
     }
 }

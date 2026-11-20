@@ -13,11 +13,13 @@ public class SSSMainMenuManager : MonoBehaviour
     [SerializeField] private SpriteRenderer background;
 
     [Header("Theme Elements")]
-    [SerializeField] private Camera camBackground;
+    [SerializeField] private Camera camBackgroundMM;
+    [SerializeField] private Camera camBackgroundGM;
     [SerializeField] private SpriteRenderer[] sceneSprites;
     [SerializeField] private Image[] buttons;
     [SerializeField] private Image[] panels;
     [SerializeField] private TMP_Text[] texts;
+    private const string ThemeKey = "SelectedTheme";
 
     public void LoadGame()
     {
@@ -78,7 +80,8 @@ public class SSSMainMenuManager : MonoBehaviour
             return;
         }
 
-        camBackground.backgroundColor = backgroundColor;
+        camBackgroundMM.backgroundColor = backgroundColor;
+        camBackgroundGM.backgroundColor = backgroundColor;
 
         foreach(SpriteRenderer sprite in sceneSprites)
         {
@@ -111,27 +114,30 @@ public class SSSMainMenuManager : MonoBehaviour
     public void styx()
     {
         ApplyTheme("#2c2c2a", "#fff3f3", "#a07cff");
-        int themeCode = 02;
-        SaveTheme(themeCode);
+        SaveTheme(0);
     }
 
     public void sangria()
     {
         ApplyTheme("#210613", "#fffff5", "#f63090");
+        SaveTheme(1);
     }
 
     public void BWR()
     {
         ApplyTheme("#1c1626", "#fefffb", "#ff2961");
+        SaveTheme(2);
     }
 
     public void Obsidian()
     {
         ApplyTheme("#000828", "#590c68", "#92215f");
+        SaveTheme(3);
     }
 
-    private void SaveTheme(int x)
+    private void SaveTheme(int themeID)
     {
+        PlayerPrefs.SetInt(ThemeKey, themeID);
         PlayerPrefs.Save();
     }
 

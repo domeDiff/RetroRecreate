@@ -1,12 +1,32 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SSSWall : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    [SerializeField] private float offsetValueX = 2f;
+    [SerializeField] private float offsetValueY = 2f;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("collided");
-        Vector2 collidePosition = new Vector2(collision.transform.position.x, collision.transform.position.y);
 
-        collision.transform.position = new Vector2(-collision.transform.position.x, collision.transform.position.y);
+        if(collision.transform.position.y > 12)
+        {
+            collision.transform.position = new Vector2(collision.transform.position.x, -collision.transform.position.y  + offsetValueY);    
+        }
+
+        else if(collision.transform.position.y < -12)
+        {
+            collision.transform.position = new Vector2(collision.transform.position.x, -collision.transform.position.y - offsetValueY);
+        }
+
+        else if(collision.transform.position.x > 20)
+        {
+            collision.transform.position = new Vector2(-collision.transform.position.x + offsetValueX, collision.transform.position.y);
+        }
+        else
+        {
+            collision.transform.position = new Vector2(-collision.transform.position.x - offsetValueX, collision.transform.position.y);
+        }
     }
 }

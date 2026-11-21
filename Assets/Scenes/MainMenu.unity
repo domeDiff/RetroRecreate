@@ -1412,7 +1412,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Main Camera_MM
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3131,7 +3131,8 @@ MonoBehaviour:
   UIGameSelectMenu: {fileID: 2125239005}
   UISettingsMenu: {fileID: 208884188}
   background: {fileID: 0}
-  camBackground: {fileID: 519420031}
+  camBackgroundMM: {fileID: 519420031}
+  camBackgroundGM: {fileID: 0}
   sceneSprites:
   - {fileID: 0}
   buttons:

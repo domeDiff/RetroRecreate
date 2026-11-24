@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 849d0181ddc55ff4b83f6cd54db8ce7c
+guid: dff1ed3352bdcfc4dac986c0175c6f2a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1821845483535809030
-    second: Screenshot 2026-11-12 113557_0
+      213: 5387814856858181603
+    second: Untitled (1042 x 94 px)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: big
+      name: Untitled (1042 x 94 px)_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 3
         y: 0
-        width: 695
-        height: 60
+        width: 1035
+        height: 94
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60a3dc190de784910800000000000000
-      internalID: 1821845483535809030
+      spriteID: 3ef9a92011d55ca40800000000000000
+      internalID: 5387814856858181603
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9130dea54b6399340ba2bdbd4607e493
+    spriteID: 31b89b98353e2e74aa56e5f26b9ca1b6
     internalID: 0
     vertices: []
     indices: 
@@ -150,7 +150,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      big: 1821845483535809030
+      Untitled (1042 x 94 px)_0: 5387814856858181603
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

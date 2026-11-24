@@ -451,7 +451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &230993508
 RectTransform:
   m_ObjectHideFlags: 0
@@ -700,7 +700,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: retro-shi
+  m_text: retro-rec
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2155e5f5ee3682f40a2be550d4a21676, type: 2}
   m_sharedMaterial: {fileID: 7561129468429191970, guid: 2155e5f5ee3682f40a2be550d4a21676, type: 2}
@@ -3132,7 +3132,6 @@ MonoBehaviour:
   UISettingsMenu: {fileID: 208884188}
   background: {fileID: 0}
   camBackgroundMM: {fileID: 519420031}
-  camBackgroundGM: {fileID: 0}
   sceneSprites:
   - {fileID: 0}
   buttons:
@@ -3787,7 +3786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2125239006
 RectTransform:
   m_ObjectHideFlags: 0

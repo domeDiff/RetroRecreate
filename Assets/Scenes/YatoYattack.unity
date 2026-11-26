@@ -623,10 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8a74ba76f87884da73bc7a24308f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YYPlayerAttack
-  attackRange: 5
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 64
+  prefab: {fileID: 8267842117752942272, guid: cb1c8ef5b217f4144a7509def8049f41, type: 3}
 --- !u!58 &1234768380
 CircleCollider2D:
   m_ObjectHideFlags: 0

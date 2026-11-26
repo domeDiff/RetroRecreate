@@ -4,7 +4,7 @@ using UnityEngine;
 public class YYEnemyMovement : MonoBehaviour
 {
     private Transform player;
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float moveSpeed = 3f;
 
     private void Awake()
     {
